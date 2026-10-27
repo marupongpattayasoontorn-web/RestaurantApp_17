@@ -91,6 +91,22 @@ namespace RestaurantApp_17
                             Console.WriteLine("ไม่พบร้านอาหาร");
                         }
                         break;
+                    case "4":
+                        double total = 0;
+                        double highest = double.MinValue;
+                        foreach (Restaurant r in restaurants)
+                        {
+                            total += r.Rating;
+                            if (r.Rating > highest)
+                            {
+                                highest = r.Rating;
+                            }
+                        }
+                        double average = total / restaurants.Count;
+                        Console.WriteLine("จำนวนร้าน: " + restaurants.Count);
+                        Console.WriteLine("คะแนนเฉลี่ย: " + average.ToString("F2"));
+                        Console.WriteLine("คะแนนสูงสุด: " + highest);
+                        break;
 
                     case "0":
                         Console.WriteLine("ปิดโปรแกรม");
