@@ -12,5 +12,6 @@ namespace RestaurantApp_17
         public string Name { get; set; }
         public string Type { get; set; }
         public double Rating { get; set; }
+
     }
 }
